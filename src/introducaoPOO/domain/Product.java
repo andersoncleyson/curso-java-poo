@@ -22,8 +22,8 @@ public class Product {
     @Override
     public String toString() {
         return "Product data: " + this.name +
-                ", $ " + this.price +
+                ", $ " + String.format("%.2f", this.price) +
                 ", " + this.quantity + " units, " +
-                "Total: $" + totalValueInStock();
+                "Total: $ " + String.format("%.2f", totalValueInStock());
     }
 }
