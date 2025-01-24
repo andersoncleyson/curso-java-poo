@@ -11,6 +11,13 @@ public class ExercicioStudent03 {
         Scanner sc = new Scanner(System.in);
 
         Student student = new Student();
-        student.notas = new double[2];
+        student.nome = sc.nextLine();
+        student.nota1 = sc.nextDouble();
+        student.nota2 = sc.nextDouble();
+        student.nota3 = sc.nextDouble();
+
+        student.mediaFinal();
+
+
     }
 }
