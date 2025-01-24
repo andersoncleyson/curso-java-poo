@@ -19,5 +19,7 @@ public class CurrencyConvertedTest01 {
         dollarBought = sc.nextDouble();
         double dollarInReais = CurrencyConverter.convertToReal(dollarPrice, dollarBought);
         System.out.println("Amount to be paid in reais = " + String.format("%.2f", dollarInReais));
+
+        sc.close();
     }
 }

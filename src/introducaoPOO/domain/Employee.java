@@ -20,5 +20,5 @@ public class Employee {
         return "Employee: " + this.name +
                 ", $ " + String.format("%.2f", netSalary());
     }
-    
+
 }
