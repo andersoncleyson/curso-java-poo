@@ -22,6 +22,10 @@ public class ProductTest {
         int quantity = sc.nextInt();
 
         Product product = new Product(name, price, quantity);
+        product.setName("Computador");
+        System.out.println("Updated product name: " + product.getName());
+        product.setPrice(1500.00);
+        System.out.println("Updated product price: " + product.getPrice());
 
         System.out.println();
         System.out.println(product);
