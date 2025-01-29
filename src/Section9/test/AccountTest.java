@@ -46,5 +46,7 @@ public class AccountTest {
         double withDraw = sc.nextDouble();
         account.withdraw(withDraw);
         System.out.println(account);
+
+        sc.close();
     }
 }

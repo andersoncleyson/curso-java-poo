@@ -14,7 +14,7 @@ public class Account {
     public Account(int accountNumber, String accountHolder, double balance){
         this.accountHolder = accountHolder;
         this.accountNumber = accountNumber;
-        this.balance = balance;
+        deposit(balance);
     }
 
     public void deposit(double value) {
@@ -23,6 +23,10 @@ public class Account {
 
     public void withdraw(double value) {
         this.balance -= value + TAX;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
     }
 
     public String getAccountHolder() {
@@ -37,9 +41,6 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
 
     @Override
     public String toString() {
