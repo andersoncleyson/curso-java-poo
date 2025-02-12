@@ -12,52 +12,41 @@ public class EmployeesTest02 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        List<Employees> list = new ArrayList<>();
+
+
         System.out.printf("How many employees will be registered? ");
-        int n = sc.nextInt();
-        sc.nextLine();
+        int N = sc.nextInt();
 
-        List<Employees> employees = new ArrayList<>();
-
-        int id;
-        String name;
-        double salary;
-
-        for (int i = 0; i < n; i++){
-            System.out.println("Emplyoee #" + (i + 1));
+        for (int i=0; i<N; i++){
+            System.out.println();
+            System.out.printf("Emplyoee #" + (i + 1) + ":");
             System.out.printf("Id: ");
-            id = sc.nextInt();
+            Integer id = sc.nextInt();
             sc.nextLine();
             System.out.printf("Name: ");
-            name = sc.nextLine();
-            System.out.printf("Salary: ");
-            salary = sc.nextDouble();
+            String name = sc.nextLine();
+            System.out.printf("Salary");
+            Double salary = sc.nextDouble();
 
-            employees.add(new Employees(id, name, salary));
-            System.out.println();
+            Employees emp = new Employees(id, name, salary);
+
+            list.add(emp);
+
         }
 
-        int idIdentify;
-        System.out.printf("Enter employee id that will be have salary increase: ");
-        idIdentify = sc.nextInt();
-
-        for (int i = 0; i < employees.size(); i++){
-            if(employees.get(i).getId() == idIdentify){
-                double value;
-                System.out.printf("Enter the percentage: ");
-                value = sc.nextDouble();
-                employees.get(i).increaseSalary(value);
-                break;
-            }
-            else {
-                System.out.println("This id does not exist!");
-            }
-        }
-
-        System.out.println("List of employees:");
-        for (Employees employee: employees) {
-            System.out.println(employee);
-        }
+        System.out.print("Enter the employee id what will have salary increase: ");
+        int idsalary = sc.nextInt();
 
         sc.close();
+    }
+
+    public Integer position(List<Employees> list, int id) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId() == id) {
+                return i;
+            }
+        }
+        return null;
     }
 }

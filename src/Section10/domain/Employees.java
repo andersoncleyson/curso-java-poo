@@ -1,18 +1,18 @@
 package Section10.domain;
 
 public class Employees {
-    private int id;
+    private Integer id;
     private String name;
-    private double salary;
+    private Double salary;
 
-    public Employees(int id, String name, double salary) {
+    public Employees(Integer id, String name, Double salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
     }
 
-    public void increaseSalary(double increase) {
-        this.salary = salary * (1 + (increase / 100));
+    public void increaseSalary(double percentage) {
+        this.salary = salary * (1 + (percentage / 100));
     }
 
     public int getId() {
