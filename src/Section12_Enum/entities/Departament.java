@@ -9,10 +9,11 @@ public class Departament {
         this.name = name;
     }
 
-    public void setName(String name){
-        this.name = name;
+    public String getName() {
+        return name;
     }
-    public String getName(String name){
-        return this.name;
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
